@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>مركز الإمبراطور للموبايل</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#c00000">
 
 <style>
 body{
 margin:0;
-font-family:Tahoma;
+font-family:Tahoma,sans-serif;
 background:#111;
-color:white;
+color:#fff;
 }
 
 header{
@@ -19,9 +23,10 @@ padding:20px;
 text-align:center;
 }
 
-.logo{
-width:120px;
+header img{
+width:140px;
 border-radius:10px;
+margin-bottom:10px;
 }
 
 .section{
@@ -37,28 +42,40 @@ border:1px solid #c00000;
 }
 
 .price{
-color:#00ff66;
 font-size:20px;
 font-weight:bold;
+color:#00ff66;
 }
 
 .btn{
 background:#c00000;
 color:white;
-padding:10px 15px;
 border:none;
+padding:10px 15px;
 border-radius:8px;
 cursor:pointer;
 }
-</style>
-</head>
 
+footer{
+text-align:center;
+padding:20px;
+background:#181818;
+margin-top:20px;
+}
+
+a{
+color:white;
+text-decoration:none;
+}
+</style>
+
+</head>
 <body>
 
 <header>
-  <img src="images/logo.jpg" width="150">
+<img src="logo.jpg" alt="شعار مركز الإمبراطور">
 <h1>مركز الإمبراطور للموبايل</h1>
-<p>بغداد - الأمين الثانية</p>
+<p>بغداد - الأمين الثانية قرب المطعم الرياضي</p>
 </header>
 
 <div class="section">
@@ -80,6 +97,20 @@ cursor:pointer;
 </div>
 
 </div>
+
+<footer>
+<p>📞 07713466895</p>
+<p>📞 07711494985</p>
+<p>بغداد - سوق الأمين قرب الشارقة</p>
+</footer>
+
 <script type="module" src="firebase.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+navigator.serviceWorker.register("./sw.js");
+}
+</script>
+
 </body>
 </html>
